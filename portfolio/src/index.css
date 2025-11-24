@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styling */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans antialiased;
+}
+
+/* Utility containers */
+.container {
+  @apply mx-auto px-4;
+}
+
+/* Grid for sidebar + content */
+.site-layout {
+  @apply grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 mt-8;
+}
