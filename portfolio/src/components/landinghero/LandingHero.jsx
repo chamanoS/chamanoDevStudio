@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LandingHero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-14 md:py-5">
+    <section className="max-w-6xl mx-auto px-6 py-14 md:py-20">
       {/* Top centered tagline */}
       <div className="text-center">
         <p className="text-sm text-gray-500 mb-4">
