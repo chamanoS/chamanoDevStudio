@@ -2,7 +2,8 @@ import React from "react";
 import LandingHero from "../landinghero/LandingHero";
 import Service from "../service/Service";
 import ValueProposition from "../valueproposition/ValueProposition";
-import AboutMePreview from "../aboutmepreview/AboutMePreview";
+import Footer from "../footer/Footer";
+
 
 
 
@@ -20,7 +21,7 @@ export default function LandingPage() {
       
       {/* Featured projects */}
       <section className="mt-12">
-        <h3 className="text-xl font-semibold text-gray-900">Featured Projects</h3>
+        <h2 className="text-2xl font-bold text-gray-900 text-center">Featured Projects</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
           <article className="rounded-2xl border p-5 hover:shadow-lg transition bg-white">
             <div className="flex items-start justify-between">
@@ -37,6 +38,28 @@ export default function LandingPage() {
             <div className="flex items-start justify-between">
               <div>
                 <h4 className="font-semibold">E-commerce Frontend</h4>
+                <p className="text-sm text-gray-600 mt-1">Fast, accessible shopping experience built with React + Vite.</p>
+              </div>
+              <span className="text-sm text-gray-400">React • Vite</span>
+            </div>
+            <div className="mt-4 text-sm text-gray-500">Short summary, performance metrics and link to demo.</div>
+          </article>
+
+          <article className="rounded-2xl border p-5 hover:shadow-lg transition bg-white">
+            <div className="flex items-start justify-between">
+              <div>
+                <h4 className="font-semibold">Automation script - API</h4>
+                <p className="text-sm text-gray-600 mt-1">Fast, accessible shopping experience built with React + Vite.</p>
+              </div>
+              <span className="text-sm text-gray-400">REST</span>
+            </div>
+            <div className="mt-4 text-sm text-gray-500">Short summary, performance metrics and link to demo.</div>
+          </article>
+
+          <article className="rounded-2xl border p-5 hover:shadow-lg transition bg-white">
+            <div className="flex items-start justify-between">
+              <div>
+                <h4 className="font-semibold">Portfolio Deep App</h4>
                 <p className="text-sm text-gray-600 mt-1">Fast, accessible shopping experience built with React + Vite.</p>
               </div>
               <span className="text-sm text-gray-400">React • Vite</span>
@@ -64,6 +87,10 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+
+      {/*Footer*/}
+      <Footer />
     </div>
   );
 }
