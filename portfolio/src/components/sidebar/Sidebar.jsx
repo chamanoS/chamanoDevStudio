@@ -16,14 +16,14 @@ export default function Sidebar() {
         </div>
 
         {/* Short Bio */}
-        <div>
+        <div className="border-b border-gray-400 pb-7">
           <p className="text-gray-700 text-sm leading-relaxed">
             I'm pationate about building clean, modern digital projects across frontend, backend, and data. This is my digital garden.
           </p>
         </div>
 
         {/* Categories */}
-        <div>
+        <div className="border-b border-gray-400 pb-7">
           <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
             Categories
           </h2>
@@ -36,7 +36,7 @@ export default function Sidebar() {
         </div>
 
         {/* Featured Work */}
-        <div>
+        <div className="border-b border-gray-400 pb-7">
           <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
             Featured
           </h2>
@@ -48,7 +48,7 @@ export default function Sidebar() {
         </div>
 
         {/* Tech Stack */}
-        <div>
+        <div className="border-b border-gray-400 pb-7">
           <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
             Tech Stack
           </h2>
