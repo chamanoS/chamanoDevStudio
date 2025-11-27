@@ -1,6 +1,8 @@
 import React from "react";
 import LandingHero from "../landinghero/LandingHero";
 import Service from "../service/Service";
+import ValueProposition from "../valueproposition/ValueProposition";
+import AboutMePreview from "../aboutmepreview/AboutMePreview";
 
 
 
@@ -13,6 +15,8 @@ export default function LandingPage() {
       {/* Services */}
       <Service/>
 
+    {/* value proposition */}
+      <ValueProposition />
       
       {/* Featured projects */}
       <section className="mt-12">
