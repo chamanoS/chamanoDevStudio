@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
 import LandingPage from './components/landingpage/LandingPage';
+import Footer from "./components/footer/Footer";
 import './App.css';
 
 export default function App() {
@@ -12,8 +13,11 @@ export default function App() {
         <Sidebar />
         <main className="flex-1 p-6 md:p-10">
           <LandingPage />
+          <Footer />
         </main>
+        
       </div>
+       
     </div>
   );
 }
