@@ -2,34 +2,29 @@ import React from "react";
 import LandingHero from "../landinghero/LandingHero";
 import ServiceCard from "../servicecard/ServiceCard";
 
-const IconCode = (
+// Icons (use these or replace with Heroicons/any SVG you like)
+const IconFullstack = (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4v16m8-8H4" />
   </svg>
 );
 
-const IconChart = (
+const IconBI = (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 11V3m0 8l-4-4m4 4 4-4M21 21v-6M3 21v-4" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 3v18h18M3 15h18" />
   </svg>
 );
 
-const IconTeach = (
+const IconAutomation = (
+  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v8m4-4H8" />
+  </svg>
+);
+
+const IconTraining = (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 14l9-5-9-5-9 5 9 5z" />
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 14l6.16-3.422A12 12 0 0112 21a12 12 0 01-6.16-10.422L12 14z" />
-  </svg>
-);
-
-const IconConsult = (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 7V3m8 4V3M3 11h18M5 21a4 4 0 004-4v-3a2 2 0 012-2h2a2 2 0 012 2v3a4 4 0 004 4" />
-  </svg>
-);
-
-const IconAuto = (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v8m4-4H8" />
   </svg>
 );
 
@@ -39,41 +34,37 @@ export default function LandingPage() {
       {/* Hero */}
       <LandingHero />
 
-      {/* Services */}
-      <section id="services" className="mt-6">
-        <h2 className="text-2xl font-bold text-gray-900">Services I offer</h2>
-        <p className="mt-2 text-gray-600 max-w-2xl">
-          I focus on delivering high-impact projects — from polished frontend apps to data & BI solutions that help teams make smarter decisions.
-        </p>
+ <section id="services" className="mt-12">
+  <h2 className="text-2xl font-bold text-gray-900">Services I Offer</h2>
+  <p className="mt-2 text-gray-600 max-w-2xl text-center mx-auto">
+    I focus on delivering high-impact projects — from polished web apps to data solutions and automation that help teams make smarter decisions.
+  </p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ServiceCard
-            icon={IconCode}
-            title="Frontend & Fullstack Development"
-            subtitle="React, Next.js, Node, REST/GraphQL — production-ready UIs, performant apps, and clean backend APIs."
-          />
-          <ServiceCard
-            icon={IconChart}
-            title="Business Intelligence & Analytics"
-            subtitle="Dashboards, ETL pipelines, Power BI reports, data visualization, and metrics design for stakeholders."
-          />
-          <ServiceCard
-            icon={IconAuto}
-            title="Automation & AI Integration"
-            subtitle="Automate workflows, integrate AI/ML APIs, build data pipelines and increase operational efficiency."
-          />
-          <ServiceCard
-            icon={IconTeach}
-            title="Tutoring & Mentoring"
-            subtitle="Personalized lessons in JavaScript, React, data visualization, and interview prep — remote or recorded sessions."
-          />
-          <ServiceCard
-            icon={IconConsult}
-            title="Technical Consulting"
-            subtitle="Architecture reviews, technical roadmaps, code audits, and advice to help shape product & engineering decisions."
-          />
-        </div>
-      </section>
+  <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ServiceCard
+      icon={IconFullstack}
+      title="Full-Stack Web Development"
+      subtitle="React, Next.js, Node.js — production-ready web apps, responsive UIs, and clean backend APIs."
+    />
+    <ServiceCard
+      icon={IconBI}
+      title="Business Intelligence & Analytics"
+      subtitle="Power BI dashboards, ETL pipelines, data visualization, and actionable insights for stakeholders."
+    />
+    <ServiceCard
+      icon={IconAutomation}
+      title="Automation & AI Integration"
+      subtitle="Automate workflows, integrate AI tools, and build efficient, data-driven pipelines."
+    />
+    <ServiceCard
+      icon={IconTraining}
+      title="Training, Mentorship & Guidance"
+      subtitle="Coding lessons, BI tutoring, code reviews, architecture advice, and interview preparation."
+    />
+  </div>
+</section>
+
+
 
       {/* Featured projects */}
       <section className="mt-12">
