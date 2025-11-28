@@ -226,7 +226,7 @@ export default function About() {
           {/* Example Card */}
           {[
             {
-              logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_2015_logo.svg/512px-Google_2015_logo.svg.png",
+              logo: "https://i.gzn.jp/img/2025/05/13/google-g-logo-updated/09_m.png",
               title: "Google Data Analytics",
               desc: "Professional Certificate (8-course specialization)",
               issuer: "Google",
