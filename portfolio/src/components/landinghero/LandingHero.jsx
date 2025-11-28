@@ -21,13 +21,14 @@ export default function LandingHero() {
         {/* Left column: subtext (aligned left inside the centred block) */}
         <div className="md:pr-6 lg:pr-12">
           <p className="text-left text-gray-600 text-lg md:text-[15px] leading-relaxed max-w-xl">
-          I'm Chamano, a Full-Stack Developer who builds fast, modern, and user-focused web applications, dashboards and automated systems.
+            I'm Chamano, a Full-Stack Developer who builds fast, modern, and
+            user-focused web applications, dashboards and automated systems.
           </p>
-        <p className="text-left text-gray-600 text-lg md:text-[15px] leading-relaxed max-w-xl">
-           I blend software engineering with data analytics to deliver solutions that are clean, scalable, and reliable—ready for production and built for maintainability.
-        </p>
-
-         
+          <p className="text-left text-gray-600 text-lg md:text-[15px] leading-relaxed max-w-xl">
+            I blend software engineering with data analytics to deliver
+            solutions that are clean, scalable, and reliable—ready for
+            production and built for maintainability.
+          </p>
 
           {/* CTAs at the bottom (still within left column on large screens) */}
           <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -46,23 +47,22 @@ export default function LandingHero() {
             </a>
           </div>
           <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
-             <p className="inline-block px-3 py-1 rounded-full text-sm bg-indigo-50 text-indigo-700 mb-4 font-medium">
-              Available for hire • Remote-friendly
+            <p className="inline-block px-3 py-1 rounded-lg text-sm bg-gray-500 text-gray-900 mb-4 p-3  px-12  font-medium cursor-pointer hover:bg-indigo-100 transition">
+              Buy Me A Coffee  |☕|
             </p>
           </div>
         </div>
 
         {/* Right column: Minimal line illustration (SVG) */}
-  <div className="flex justify-center md:justify-end">
-  <div className="w-full max-w-xs md:max-w-base bg-white p-3 rounded-2xl border border-gray-200 shadow">
-    <img
-      src={MyPhoto}
-      alt="Chamano Dev"
-      className="w-full h-72 rounded-xl object-cover object-top"
-    />
-  </div>
-</div>
-
+        <div className="flex justify-center md:justify-end">
+          <div className="w-full max-w-xs md:max-w-base bg-white p-3 rounded-2xl border border-gray-200 shadow">
+            <img
+              src={MyPhoto}
+              alt="Chamano Dev"
+              className="w-full h-72 rounded-xl object-cover object-top"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
