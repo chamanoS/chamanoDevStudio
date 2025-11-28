@@ -18,7 +18,7 @@ export default function Sidebar() {
         {/* Short Bio */}
         <div className="border-b border-gray-400 pb-7">
           <p className="text-gray-700 text-sm leading-relaxed">
-            I'm pationate about building clean, modern digital projects across frontend, backend, and data. This is my digital garden.
+            I'm consultant who build profitable solutions. This is my digital garden.
           </p>
         </div>
 
