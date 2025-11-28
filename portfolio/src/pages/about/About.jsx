@@ -2,7 +2,25 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDatabase, FaChartBar, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin, FaBriefcase, FaFileDownload, FaCloud, FaPython, FaJava, FaBullseye, FaPaintBrush, FaPenNib, } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaChartBar,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaGithub,
+  FaLinkedin,
+  FaBriefcase,
+  FaFileDownload,
+  FaCloud,
+  FaPython,
+  FaJava,
+  FaBullseye,
+  FaPaintBrush,
+  FaPenNib,
+} from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 
 export default function About() {
@@ -16,7 +34,11 @@ export default function About() {
         <h2 className="text-xl md:text-2xl mb-4">
           <span className="text-indigo-400">
             <Typewriter
-              words={["Fullstack Developer", "Problem Solver", "Data Enthusiast"]}
+              words={[
+                "Fullstack Developer",
+                "Problem Solver",
+                "Data Enthusiast",
+              ]}
               loop={true}
               cursor
               cursorStyle="|"
@@ -76,6 +98,13 @@ export default function About() {
         <h2 className="text-3xl font-semibold mb-6">Skills</h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {/* JavaScript */}
+          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
+            <FaJs className="text-4xl text-yellow-500 mb-3" />
+            <h3 className="font-semibold">JavaScript</h3>
+            <p className="text-sm">Frontend logic & interactions</p>
+          </div>
+
           {/* React JS */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
             <FaReact className="text-4xl text-blue-500 mb-3" />
@@ -89,19 +118,18 @@ export default function About() {
             <h3 className="font-semibold">Node.js</h3>
             <p className="text-sm">APIs & backend fundamentals</p>
           </div>
-
-          {/* SQL / Databases */}
+          {/* Python */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaDatabase className="text-4xl text-purple-600 mb-3" />
-            <h3 className="font-semibold">SQL / Databases</h3>
-            <p className="text-sm">Data modelling & queries</p>
+            <FaPython className="text-4xl text-blue-500 mb-3" />
+            <h3 className="font-semibold">Python</h3>
+            <p className="text-sm">Scripting, data analysis & automation</p>
           </div>
 
-          {/* Power BI */}
+          {/* Java */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaChartBar className="text-4xl text-yellow-500 mb-3" />
-            <h3 className="font-semibold">Power BI</h3>
-            <p className="text-sm">Dashboards & data analytics</p>
+            <FaJava className="text-4xl text-red-600 mb-3" />
+            <h3 className="font-semibold">Java - SpringBoot</h3>
+            <p className="text-sm">OOP & backend development</p>
           </div>
 
           {/* HTML5 */}
@@ -118,13 +146,6 @@ export default function About() {
             <p className="text-sm">Responsive & modern utility-first styling</p>
           </div>
 
-          {/* JavaScript */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaJs className="text-4xl text-yellow-500 mb-3" />
-            <h3 className="font-semibold">JavaScript</h3>
-            <p className="text-sm">Frontend logic & interactions</p>
-          </div>
-
           {/* Git & GitHub */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
             <FaGithub className="text-4xl text-gray-900 mb-3" />
@@ -138,19 +159,18 @@ export default function About() {
             <h3 className="font-semibold">AWS Fundamentals</h3>
             <p className="text-sm">Cloud services basics & deployment</p>
           </div>
-
-          {/* Python */}
+          {/* SQL / Databases */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaPython className="text-4xl text-blue-500 mb-3" />
-            <h3 className="font-semibold">Python</h3>
-            <p className="text-sm">Scripting, data analysis & automation</p>
+            <FaDatabase className="text-4xl text-purple-600 mb-3" />
+            <h3 className="font-semibold">SQL / Databases</h3>
+            <p className="text-sm">Data modelling & queries</p>
           </div>
 
-          {/* Java */}
+          {/* Power BI */}
           <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaJava className="text-4xl text-red-600 mb-3" />
-            <h3 className="font-semibold">Java</h3>
-            <p className="text-sm">OOP & backend development</p>
+            <FaChartBar className="text-4xl text-yellow-500 mb-3" />
+            <h3 className="font-semibold">Power BI</h3>
+            <p className="text-sm">Dashboards & data analytics</p>
           </div>
 
           {/* ETL / Data Tools */}
@@ -195,7 +215,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">
                 Junior Developer — Freelance
               </h3>
-              <p className="text-sm text-gray-600">2022 - Present</p>
+              <p className="text-sm text-gray-600">2019 - Present</p>
               <p className="mt-2 text-gray-700">
                 Built web applications, dashboards, and responsive sites for
                 small businesses and personal projects. Focus on React,
@@ -207,12 +227,66 @@ export default function About() {
             <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">
-                IT Support — Local Company
+                Software developer Intern — The Digital Academy
               </h3>
-              <p className="text-sm text-gray-600">2020 - 2022</p>
+              <p className="text-sm text-gray-600">2019 - 2020 </p>
+              <p className="mt-2 text-gray-700">
+                Built web applications, dashboards, and responsive sites for
+                small businesses and personal projects. Focus on React,
+                Tailwind, Power BI, and modern UI design.
+              </p>
+            </div>
+          </div>{" "}
+          <div className="flex gap-4 items-start">
+            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold">
+                Application Developer — M & T Development
+              </h3>
+              <p className="text-sm text-gray-600">2022 - 2023</p>
+              <p className="mt-2 text-gray-700">
+                Built web applications, dashboards, and responsive sites for
+                small businesses and personal projects. Focus on React,
+                Tailwind, Power BI, and modern UI design.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4 items-start">
+            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold">
+                IT Support — Centenary Networks and Azania Data
+              </h3>
+              <p className="text-sm text-gray-600">2023 - 2024</p>
               <p className="mt-2 text-gray-700">
                 Assisted clients with technical issues, managed computer
                 systems, and supported networking and software troubleshooting.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4 items-start">
+            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold">
+                Software Developer — Geeks4learning
+              </h3>
+              <p className="text-sm text-gray-600">2023 - 2024</p>
+              <p className="mt-2 text-gray-700">
+                Built web applications, dashboards, and responsive sites for
+                small businesses and personal projects. Focus on React,
+                Tailwind, Power BI, and modern UI design.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4 items-start">
+            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold">BI Analyst — FNB</h3>
+              <p className="text-sm text-gray-600">2024 - 2025</p>
+              <p className="mt-2 text-gray-700">
+                Built web applications, dashboards, and responsive sites for
+                small businesses and personal projects. Focus on React,
+                Tailwind, Power BI, and modern UI design.
               </p>
             </div>
           </div>
@@ -274,67 +348,6 @@ export default function About() {
               <p className="text-xs text-gray-500">
                 Issued by {cert.issuer} • {cert.year}
               </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* 🟪 PROJECTS / PORTFOLIO */}
-      <section id="projects" className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              img: "/project1.png",
-              title: "Portfolio Website",
-              desc: "React, Tailwind, Vercel",
-              live: "#",
-              code: "#",
-            },
-            {
-              img: "/project2.png",
-              title: "Dashboard App",
-              desc: "React, Node.js, Power BI",
-              live: "#",
-              code: "#",
-            },
-            {
-              img: "/project3.png",
-              title: "E-commerce Site",
-              desc: "React, Node.js, MongoDB",
-              live: "#",
-              code: "#",
-            },
-          ].map((project, i) => (
-            <motion.div
-              key={i}
-              className="group p-5 bg-white shadow-lg rounded-xl hover:scale-105 transition"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
-              <img
-                src={project.img}
-                alt={project.title}
-                className="rounded mb-3"
-              />
-              <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
-              <p className="text-sm text-gray-600 mb-2">{project.desc}</p>
-              <div className="flex gap-2">
-                <a
-                  href={project.live}
-                  className="text-indigo-600 hover:underline"
-                >
-                  Live
-                </a>
-                <a
-                  href={project.code}
-                  className="text-gray-800 hover:underline"
-                >
-                  Code
-                </a>
-              </div>
             </motion.div>
           ))}
         </div>
