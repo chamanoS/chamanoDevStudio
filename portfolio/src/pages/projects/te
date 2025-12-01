@@ -164,7 +164,7 @@ export default function Projects() {
         ))}
       </div>
 
-     
+      <hr className="my-16" />
 
           {/* FEATURED PROJECTS */}
       <h2 className="text-3xl font-semibold mb-6" id="portfolio">
@@ -217,9 +217,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-
-   <hr className="my-16" />
-
 
         {/* SERVICES */}
             <h2 className="text-3xl font-semibold mb-6">What I Can Build For You</h2>
@@ -290,39 +287,6 @@ export default function Projects() {
               </div>
             </div>
 
-
-   {/* PROCESS TIMELINE - Styled with Vertical Line */}
-      <h2 className="text-3xl font-semibold mb-6">My Project Workflow</h2>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        <ProcessStep
-            number={1}
-            title="Discovery & Strategy"
-            description="Deep dive into goals, user needs, and required data sources."
-            isLast={false}
-        />
-        <ProcessStep
-            number={2}
-            title="Architecture & Design"
-            description="System blueprints, data models, and wireframes for the UX flow."
-            isLast={false}
-        />
-        <ProcessStep
-            number={3}
-            title="Development & Testing"
-            description="Agile development, clean coding, and rigorous QA testing."
-            isLast={false}
-        />
-        <ProcessStep
-            number={4}
-            title="Launch & Refinement"
-            description="Deployment, ongoing optimization, and support for your team."
-            isLast={false}
-        />
-      </div>
-      
-   <hr className="my-16" />
-   
       {/* SKILLS BREAKDOWN - NEW FEATURE */}
       <h2 className="text-3xl font-semibold mb-10 text-center">Core Technical Skills</h2>
       <div className="grid md:grid-cols-2 gap-10 mb-20">
@@ -351,23 +315,54 @@ export default function Projects() {
               The Data-Driven Difference
             </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-                Most developers build apps. I build solutions that speak the language of business. My unique blend of skills means every system is:
+                Most developers build apps. **I build solutions that speak the language of business.** My unique blend of skills means every system is:
             </p>
             <div className="space-y-4">
                 <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Clean & Maintainable Code: Built for the long term.
+                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> **Clean & Maintainable Code:** Built for the long term.
                 </p>
                 <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Data-Optimized Architecture: Databases and APIs designed for scale and performance.
+                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> **Data-Optimized Architecture:** Databases and APIs designed for scale and performance.
                 </p>
                 <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Quantitative Impact: Focused on measurable ROI (e.g., time saved, revenue increased).
+                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> **Quantitative Impact:** Focused on measurable ROI (e.g., time saved, revenue increased).
                 </p>
             </div>
         </div>
       </div>
       
+      <hr className="my-16" />
 
+
+      {/* PROCESS TIMELINE - Styled with Vertical Line */}
+      <h2 className="text-3xl font-semibold mb-10 text-center">My Project Workflow</h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <ProcessStep
+            number={1}
+            title="Discovery & Strategy"
+            description="Deep dive into goals, user needs, and required data sources."
+            isLast={false}
+        />
+        <ProcessStep
+            number={2}
+            title="Architecture & Design"
+            description="System blueprints, data models, and wireframes for the UX flow."
+            isLast={false}
+        />
+        <ProcessStep
+            number={3}
+            title="Development & Testing"
+            description="Agile development, clean coding, and rigorous QA testing."
+            isLast={false}
+        />
+        <ProcessStep
+            number={4}
+            title="Launch & Refinement"
+            description="Deployment, ongoing optimization, and support for your team."
+            isLast={true}
+        />
+      </div>
       
       <hr className="my-16" />
 
