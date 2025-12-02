@@ -5,6 +5,7 @@ import LandingPage from "./components/landingpage/LandingPage";
 import Footer from "./components/footer/Footer";
 import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
+import Articles from "./pages/articles/Articles";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/articles" element={<Articles />} />
           </Routes>
 
           <Footer />

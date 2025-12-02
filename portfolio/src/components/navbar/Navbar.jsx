@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className="space-x-6 hidden md:flex">
           <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
           <a href="/projects" className="text-gray-600 hover:text-gray-900">Projects</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Articles</a>
+          <a href="/articles" className="text-gray-600 hover:text-gray-900">Articles</a>
           <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
         </nav>
       </div>
