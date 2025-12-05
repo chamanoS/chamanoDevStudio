@@ -8,6 +8,7 @@ export default function Navbar() {
           ChamanoDevStudio.com
         </a>
         <nav className="space-x-6 hidden md:flex">
+          <a href="/" className="text-gray-600 hover:text-gray-900">Home</a>
           <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
           <a href="/projects" className="text-gray-600 hover:text-gray-900">Projects</a>
           <a href="/articles" className="text-gray-600 hover:text-gray-900">Articles</a>
