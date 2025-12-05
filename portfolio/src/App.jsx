@@ -8,6 +8,7 @@ import Projects from "./pages/projects/Projects";
 import Articles from "./pages/articles/Articles";
 import ArticleDetail from "./pages/articles/ArticleDetail";
 import AdminCreateArticle from "./pages/articles/AdminCreateArticle";
+import Contact from "./pages/contact/Contact";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/articles" element={<Articles />} />
             <Route path="/article/:id" element={<ArticleDetail />} />
             <Route path="/admin/new-article" element={<AdminCreateArticle />} />
+             <Route path="/contact" element={<Contact />} />
           </Routes>
 
           <Footer />

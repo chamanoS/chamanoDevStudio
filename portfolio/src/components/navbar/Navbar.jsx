@@ -12,7 +12,7 @@ export default function Navbar() {
           <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
           <a href="/projects" className="text-gray-600 hover:text-gray-900">Projects</a>
           <a href="/articles" className="text-gray-600 hover:text-gray-900">Articles</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
+          <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
         </nav>
       </div>
     </header>
