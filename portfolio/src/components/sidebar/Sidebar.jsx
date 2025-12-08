@@ -22,10 +22,10 @@ export default function Sidebar() {
         {/* Profile */}
         <div className="mt-10 md:mt-20">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Chamano Dev Studio
+            About Me
           </h1>
           <p className="text-sm text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
-            Full-Stack Developer • BI Enthusiast • Automation Expert • Tutor
+          I'm a Dev who build profitable solutions. This is my digital garden.
           </p>
         </div>
 
