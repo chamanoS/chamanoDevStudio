@@ -32,7 +32,7 @@ export default function Service() {
   return (
 
 <section id="services" className="mt-12">
-        <h2 className="text-2xl font-bold text-gray-900">Services I Offer</h2>
+        <h2 className="text-2xl font-bold text-gray-900 text-center">Services I Offer</h2>
         <p className="mt-2 text-gray-600 max-w-2xl text-center mx-auto">
           I focus on delivering high-impact projects — from polished web apps to data solutions and automation that help teams make smarter decisions.
         </p>

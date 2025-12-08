@@ -86,7 +86,7 @@ export default function Sidebar() {
 
         {/* Footer */}
         <div className="pt-4 text-xs text-gray-500">
-          © {new Date().getFullYear()} Siba Yahudah
+          © {new Date().getFullYear()} ChamanoDevStudio
         </div>
 
       </div>

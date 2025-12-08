@@ -79,21 +79,21 @@ export default function Contact() {
         {/* LEFT COLUMN */}
         <div className="space-y-6">
           {/* EMAIL */}
-          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+          <motion.div className="p-4 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
             <FaEnvelope className="text-3xl text-indigo-600 mb-3" />
             <h3 className="font-semibold text-lg">Email</h3>
-            <p className="text-sm text-gray-600">youremail@example.com</p>
+            <p className="text-sm text-gray-600">chamano.sr@gmail.com</p>
           </motion.div>
 
           {/* GITHUB */}
-          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+          <motion.div className="p-4 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
             <FaGithub className="text-3xl text-gray-700 mb-3" />
             <h3 className="font-semibold text-lg">GitHub</h3>
             <a className="text-blue-600" href="https://github.com/" target="_blank">github.com</a>
           </motion.div>
 
           {/* LINKEDIN */}
-          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+          <motion.div className="p-4 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
             <FaLinkedin className="text-3xl text-blue-700 mb-3" />
             <h3 className="font-semibold text-lg">LinkedIn</h3>
             <a className="text-blue-600" href="https://linkedin.com" target="_blank">linkedin.com</a>
