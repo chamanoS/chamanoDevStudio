@@ -1,162 +1,202 @@
+// src/pages/contact/Contact.jsx
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaCalendarAlt,
+} from "react-icons/fa";
+
+// Fix Leaflet icons
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
+});
+
+// Default map location
+const defaultPosition = { lat: -26.2041, lng: 28.0473 };
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  // Simple contact form fields (no EmailJS yet)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+  const [openFaq, setOpenFaq] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
+  const faqs = [
+    { q: "What services do you offer?", a: "Web apps, dashboards, APIs and automation systems." },
+    { q: "How long does a project take?", a: "Depends on the scope: 1–6 weeks." },
+    { q: "Do you work remotely?", a: "Yes, fully remote-friendly." },
+  ];
 
-    setTimeout(() => setSubmitted(false), 3500);
+  const faqVariants = {
+    closed: { height: 0, opacity: 0 },
+    open: { height: "auto", opacity: 1 },
   };
 
+  function validate() {
+    const e = {};
+    if (!name.trim()) e.name = "Name is required";
+    if (!email.trim()) e.email = "Email is required";
+    if (!message.trim()) e.message = "Message is required";
+    return e;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const validation = validate();
+    setErrors(validation);
+    if (Object.keys(validation).length > 0) return;
+
+    alert("Form submitted successfully (EmailJS disabled).");
+  }
+
   return (
-    <div className="min-h-screen px-6 md:px-14 py-20 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-      
+    <div className="min-h-screen px-6 md:px-14 py-20 bg-gray-50">
       {/* HEADER */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-12 text-center"
+        className="mb-10 text-center max-w-3xl mx-auto"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Let's Work Together
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Whether you want dashboards, automation, a website, or a full product — 
-          I'm ready to help you build something exceptional.
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">Let’s work together</h1>
+        <p className="text-gray-600">Send me a message and I’ll reply soon.</p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-3 gap-12">
-
-        {/* CONTACT INFO */}
+      <div className="grid lg:grid-cols-3 gap-10">
+        {/* LEFT COLUMN */}
         <div className="space-y-6">
-          {/* CARD */}
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md"
-          >
-            <FaEnvelope className="text-blue-600 dark:text-blue-400 text-3xl mb-3" />
-            <h3 className="font-semibold mb-1 text-lg">Email</h3>
-            <p className="text-gray-600 dark:text-gray-400">youremail@example.com</p>
+          {/* EMAIL */}
+          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+            <FaEnvelope className="text-3xl text-indigo-600 mb-3" />
+            <h3 className="font-semibold text-lg">Email</h3>
+            <p className="text-sm text-gray-600">youremail@example.com</p>
           </motion.div>
 
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md"
-          >
-            <FaGithub className="text-gray-700 dark:text-gray-300 text-3xl mb-3" />
-            <h3 className="font-semibold mb-1 text-lg">GitHub</h3>
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              github.com/yourprofile
-            </a>
+          {/* GITHUB */}
+          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+            <FaGithub className="text-3xl text-gray-700 mb-3" />
+            <h3 className="font-semibold text-lg">GitHub</h3>
+            <a className="text-blue-600" href="https://github.com/" target="_blank">github.com</a>
           </motion.div>
 
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md"
-          >
-            <FaLinkedin className="text-blue-700 text-3xl mb-3" />
-            <h3 className="font-semibold mb-1 text-lg">LinkedIn</h3>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              linkedin.com/in/yourprofile
-            </a>
+          {/* LINKEDIN */}
+          <motion.div className="p-6 rounded-2xl bg-white shadow-md" whileHover={{ scale: 1.02 }}>
+            <FaLinkedin className="text-3xl text-blue-700 mb-3" />
+            <h3 className="font-semibold text-lg">LinkedIn</h3>
+            <a className="text-blue-600" href="https://linkedin.com" target="_blank">linkedin.com</a>
           </motion.div>
 
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md"
-          >
-            <FaPhone className="text-green-600 dark:text-green-400 text-3xl mb-3" />
-            <h3 className="font-semibold mb-1 text-lg">Phone</h3>
-            <p className="text-gray-600 dark:text-gray-400">+27 00 000 0000</p>
-          </motion.div>
+          {/* FAQ */}
+          <div className="p-6 rounded-2xl bg-white shadow-md">
+            <h4 className="text-lg font-semibold mb-4">FAQ</h4>
+            {faqs.map((f, i) => (
+              <div key={i} className="border rounded-lg mb-3 overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-4 py-3 flex justify-between"
+                >
+                  <span className="font-medium">{f.q}</span>
+                  <span>{openFaq === i ? "–" : "+"}</span>
+                </button>
+
+                <motion.div
+                  initial="closed"
+                  animate={openFaq === i ? "open" : "closed"}
+                  variants={faqVariants}
+                  className="px-4"
+                >
+                  <div className="py-3 text-sm text-gray-700">{f.a}</div>
+                </motion.div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* CONTACT FORM */}
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="lg:col-span-2 bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 space-y-6"
-        >
-          {submitted && (
-            <div className="p-4 rounded-lg bg-green-100 text-green-700 text-sm font-medium">
-              🎉 Message sent! I’ll get back to you soon.
-            </div>
-          )}
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex flex-col">
-              <label className="text-sm mb-1">Your Name</label>
-              <input
-                type="text"
-                required
-                className="p-3 rounded-lg border dark:border-gray-700 bg-gray-50 dark:bg-gray-700 outline-none"
-              />
-            </div>
-
-            <div className="flex flex-col">
-              <label className="text-sm mb-1">Email Address</label>
-              <input
-                type="email"
-                required
-                className="p-3 rounded-lg border dark:border-gray-700 bg-gray-50 dark:bg-gray-700 outline-none"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <label className="text-sm mb-1">Subject</label>
-            <input
-              type="text"
-              required
-              className="p-3 rounded-lg border dark:border-gray-700 bg-gray-50 dark:bg-gray-700 outline-none"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label className="text-sm mb-1">Your Message</label>
-            <textarea
-              required
-              rows="6"
-              className="p-3 rounded-lg border dark:border-gray-700 bg-gray-50 dark:bg-gray-700 outline-none"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 text-center rounded-xl bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold text-lg transition"
+        {/* FORM + MAP */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* FORM */}
+          <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white shadow-xl rounded-2xl p-8"
           >
-            Send Message
-          </button>
-        </motion.form>
-      </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* NAME */}
+              <div>
+                <label className="block text-sm mb-1">Name *</label>
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.name ? "border-red-400" : "border-gray-200"
+                  }`}
+                />
+                {errors.name && <div className="text-red-500 text-sm">{errors.name}</div>}
+              </div>
 
-      {/* MAP OR IMAGE PLACEHOLDER */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-20 h-72 rounded-2xl overflow-hidden shadow-lg"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1200"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+              {/* EMAIL */}
+              <div>
+                <label className="block text-sm mb-1">Email *</label>
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.email ? "border-red-400" : "border-gray-200"
+                  }`}
+                />
+                {errors.email && <div className="text-red-500 text-sm">{errors.email}</div>}
+              </div>
+            </div>
+
+            {/* MESSAGE */}
+            <div className="mt-4">
+              <label className="block text-sm mb-1">Message *</label>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows="6"
+                className={`w-full px-4 py-3 rounded-lg border ${
+                  errors.message ? "border-red-400" : "border-gray-200"
+                }`}
+              />
+              {errors.message && <div className="text-red-500 text-sm">{errors.message}</div>}
+            </div>
+
+            {/* SUBMIT */}
+            <button type="submit" className="mt-6 px-6 py-3 rounded-lg bg-indigo-600 text-white">
+              Send Message
+            </button>
+          </motion.form>
+
+          {/* MAP */}
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl overflow-hidden shadow-md">
+            {/* <MapContainer
+              center={[defaultPosition.lat, defaultPosition.lng]}
+              zoom={11}
+              style={{ height: 320 }}
+            >
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[defaultPosition.lat, defaultPosition.lng]}>
+                <Popup>Based in Johannesburg — available worldwide.</Popup>
+              </Marker>
+            </MapContainer> */}
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
