@@ -1,95 +1,174 @@
 import React from "react";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiFolder, FiLayers, FiBookOpen, FiStar } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function Sidebar() {
   return (
-    <aside className="md:text-left hidden lg:block w-64 h-[calc(100vh)]
-        overflow-y-auto border-r border-gray-200 bg-gray-50 p-6 sticky top-0 h-screen ">
-      <div className="space-y-8  ">
-
+    <aside
+      className="
+        hidden lg:block w-72 h-[100vh] sticky top-0 overflow-y-auto 
+        bg-gradient-to-b from-indigo-50 via-white to-indigo-100 
+        dark:from-gray-900 dark:via-gray-800 dark:to-gray-900
+        border-r border-indigo-200 dark:border-gray-700 
+        shadow-xl p-6 rounded-r-2xl
+      "
+    >
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4 }}
+        className="space-y-10"
+      >
         {/* Profile */}
-        <div className=" md:mt-20">
-          <h1 className="text-xl font-bold text-gray-900">About Me</h1>
-          <p className="text-sm text-gray-600 mt-1">
-            Full-Stack Developer • Aspiring BI Analyst • Data Enthusiast • Tutor
+        <div className="mt-10 md:mt-20">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Chamano Dev Studio
+          </h1>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+            Full-Stack Developer • BI Enthusiast • Automation Expert • Tutor
           </p>
         </div>
 
-        {/* Short Bio */}
-        <div className="border-b border-gray-400 pb-7">
-          <p className="text-gray-700 text-sm leading-relaxed">
-            I'm consultant who build profitable solutions. This is my digital garden.
-          </p>
+        {/* Mini Stats */}
+        <div className="grid grid-cols-3 gap-3 text-center">
+          {[
+            { label: "Projects", value: "42" },
+            { label: "Clients", value: "15+" },
+            { label: "Articles", value: "30" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="
+                p-3 rounded-xl bg-white dark:bg-gray-800 shadow 
+                hover:shadow-md transition cursor-pointer
+              "
+            >
+              <p className="text-lg font-bold text-indigo-600">{item.value}</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">{item.label}</p>
+            </div>
+          ))}
         </div>
 
         {/* Categories */}
-        <div className="border-b border-gray-400 pb-7">
-          <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
-            Categories
-          </h2>
-          <ul className="space-y-1 text-gray-600 text-sm">
-            <li><a href="#" className="hover:text-gray-900">Frontend Development</a></li>
-            <li><a href="#" className="hover:text-gray-900">Backend & APIs</a></li>
-            <li><a href="#" className="hover:text-gray-900">Data & BI</a></li>
-            <li><a href="#" className="hover:text-gray-900">Dev Tips</a></li>
-          </ul>
-        </div>
+        <section>
+          <div className="flex items-center gap-2 mb-2">
+            <FiLayers className="text-indigo-600" />
+            <h2 className="font-semibold text-gray-800 dark:text-gray-200 uppercase text-sm">
+              Categories
+            </h2>
+          </div>
 
-        {/* Featured Work */}
-        <div className="border-b border-gray-400 pb-7">
-          <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
-            Featured
-          </h2>
-          <ul className="space-y-1 text-gray-600 text-sm">
-            <li><a href="#" className="hover:text-gray-900">Full Portfolio Website</a></li>
-            <li><a href="#" className="hover:text-gray-900">Power BI Sales Dashboard</a></li>
-            <li><a href="#" className="hover:text-gray-900">Node.js API Project</a></li>
+          <ul className="space-y-2 text-sm">
+            {["Frontend Development", "Backend & APIs", "Data & BI", "Dev Tips"].map((cat, i) => (
+              <motion.li
+                whileHover={{ x: 5 }}
+                key={i}
+              >
+                <a
+                  href="#"
+                  className="
+                    block px-2 py-1 rounded-md 
+                    text-gray-700 dark:text-gray-300 
+                    hover:bg-indigo-100 dark:hover:bg-gray-700 
+                    hover:text-indigo-700 dark:hover:text-indigo-400
+                    transition
+                  "
+                >
+                  {cat}
+                </a>
+              </motion.li>
+            ))}
           </ul>
-        </div>
+        </section>
+
+        {/* Featured */}
+        <section>
+          <div className="flex items-center gap-2 mb-2">
+            <FiStar className="text-indigo-600" />
+            <h2 className="font-semibold text-gray-800 dark:text-gray-200 uppercase text-sm">
+              Featured
+            </h2>
+          </div>
+
+          <ul className="space-y-2 text-sm">
+            {[
+              "Full Portfolio Website",
+              "Power BI Sales Dashboard",
+              "Node.js API Project",
+            ].map((item, i) => (
+              <motion.li
+                whileHover={{ x: 5 }}
+                key={i}
+              >
+                <a
+                  href="#"
+                  className="
+                    block px-2 py-1 rounded-md 
+                    text-gray-700 dark:text-gray-300 
+                    hover:bg-indigo-100 dark:hover:bg-gray-700 
+                    hover:text-indigo-700 dark:hover:text-indigo-400
+                    transition
+                  "
+                >
+                  {item}
+                </a>
+              </motion.li>
+            ))}
+          </ul>
+        </section>
 
         {/* Tech Stack */}
-        <div className="border-b border-gray-400 pb-7">
-          <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
-            Tech Stack
-          </h2>
-          <ul className="space-y-1 text-gray-600 text-sm">
+        <section>
+          <div className="flex items-center gap-2 mb-2">
+            <FiBookOpen className="text-indigo-600" />
+            <h2 className="font-semibold text-gray-800 dark:text-gray-200 uppercase text-sm">
+              Tech Stack
+            </h2>
+          </div>
+
+          <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-sm">
             <li>React • Vite • Tailwind</li>
             <li>Node.js • Express</li>
-            <li>SQL • Power BI</li>
-            <li>Git • Linux • REST APIs</li>
+            <li>SQL • Power BI • Python</li>
+            <li>Linux • REST APIs</li>
           </ul>
-        </div>
+        </section>
 
-        {/* Contact */}
-        <div>
-          <h2 className="font-semibold text-gray-700 uppercase text-sm mb-2">
-            Connect
-          </h2>
-          <ul className="space-y-2 text-gray-700 text-sm">
-            <li>
-              <a href="mailto:your@email.com" className="flex items-center gap-2 hover:text-indigo-600">
-                <FiMail /> Email
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com" className="flex items-center gap-2 hover:text-indigo-600">
-                <FiLinkedin /> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com" className="flex items-center gap-2 hover:text-indigo-600">
-                <FiGithub /> GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
+        {/* Socials */}
+        <section>
+          <div className="flex items-center gap-2 mb-2">
+            <FiFolder className="text-indigo-600" />
+            <h2 className="font-semibold text-gray-800 dark:text-gray-200 uppercase text-sm">
+              Connect
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {[
+              { label: "Email", icon: <FiMail />, link: "mailto:your@email.com" },
+              { label: "LinkedIn", icon: <FiLinkedin />, link: "https://linkedin.com" },
+              { label: "GitHub", icon: <FiGithub />, link: "https://github.com" },
+            ].map((item, i) => (
+              <motion.a
+                whileHover={{ x: 5, scale: 1.05 }}
+                key={i}
+                href={item.link}
+                className="
+                  flex items-center gap-3 text-gray-700 dark:text-gray-300 
+                  hover:text-indigo-600 dark:hover:text-indigo-400 text-sm
+                "
+              >
+                {item.icon} {item.label}
+              </motion.a>
+            ))}
+          </div>
+        </section>
 
         {/* Footer */}
-        <div className="pt-4 text-xs text-gray-500">
-          © {new Date().getFullYear()} ChamanoDevStudio
+        <div className="pt-4 text-xs text-gray-500 dark:text-gray-400 ">
+          © {new Date().getFullYear()} Chamano Dev Studio
         </div>
-
-      </div>
+      </motion.div>
     </aside>
   );
 }
