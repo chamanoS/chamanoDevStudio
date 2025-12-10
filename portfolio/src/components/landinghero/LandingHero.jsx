@@ -1,68 +1,129 @@
 import React from "react";
+import { motion } from "framer-motion";
 import MyPhoto from "../../assets/images/chamanoimg.jpeg";
 
 export default function LandingHero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-14 md:py-[90px]">
-      {/* Top centered tagline */}
-      <div className="text-center">
-        <p className="text-sm text-gray-500 mb-4">
-          Empowering businesses with clean, modern & scalable digital solutions.
-        </p>
-      </div>
+    <section className="max-w-6xl mx-auto px-6 py-24 md:py-24">
+      
+      {/* Top Tagline */}
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-sm tracking-wide text-gray-600 dark:text-gray-300 mb-4"
+      >
+        Empowering Brands • Elevating Experience • Engineering Excellence
+      </motion.p>
 
-      {/* Headline */}
-      <h4 className="text-center text-3xl md:text-4xl lg:text-4xl font-extrabold text-gray-900 leading-tight max-w-3xl mx-auto">
-        I build beautiful, reliable web apps and turn data into decisions.
-      </h4>
+      {/* HEADLINE */}
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="
+          text-center text-4xl md:text-5xl lg:text-5xl 
+          font-extrabold leading-tight max-w-4xl mx-auto
+          bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600
+          bg-clip-text text-transparent
+        "
+      >
+        I Build Digital Experiences That  
+        <span className="block">Convert, Scale & Inspire.</span>
+      </motion.h1>
 
-      {/* Two-column middle: left text, right illustration */}
-      <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left column: subtext (aligned left inside the centred block) */}
-        <div className="md:pr-6 lg:pr-12">
-          <p className="text-left text-gray-600 text-lg md:text-[15px] leading-relaxed max-w-xl">
-            I'm Chamano, a Full-Stack Developer who builds fast, modern, and
-            user-focused web applications, dashboards and automated systems.
+      
+      {/* TWO COLUMN SECTION */}
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT — TEXT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="md:pr-10"
+        >
+        <p className="text-gray-700 dark:text-gray-300 text-[16px] leading-relaxed mb-4">
+          I'm Chamano — a full-stack developer blending modern software, beautiful design,  
+          and data-driven insights to build products that feel good and work even better.
           </p>
-          <p className="text-left text-gray-600 text-lg md:text-[15px] leading-relaxed max-w-xl">
-            I blend software engineering with data analytics to deliver
-            solutions that are clean, scalable, and reliable—ready for
-            production and built for maintainability.
+
+          <p className="text-gray-700 dark:text-gray-300 text-[16px] leading-relaxed">
+            My focus is simple: clean, great UX, real impact.  
           </p>
 
-          {/* CTAs at the bottom (still within left column on large screens) */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-5 py-1 rounded-lg bg-gray-900 text-white text-sm font-medium shadow hover:opacity-95 transition"
+          {/* CTAs */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-5">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              href="/contact"
+              className="
+                px-5 py-3 rounded-xl shadow-lg text-white 
+                bg-gradient-to-r from-indigo-600 to-purple-600
+                font-semibold text-sm tracking-wide
+                hover:shadow-xl transition
+              "
             >
               Hire Me
-            </a>
+            </motion.a>
 
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center px-5 py-1 rounded-lg border border-gray-200 text-gray-800 text-sm hover:bg-gray-50 transition"
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              href="/projects"
+              className="
+                px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-600 
+                text-gray-800 dark:text-gray-200 
+                font-semibold text-sm 
+                hover:bg-gray-100 dark:hover:bg-gray-700 transition
+              "
             >
               View Projects
-            </a>
+            </motion.a>
           </div>
-          <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <p className="inline-block px-3 py-1 rounded-lg text-sm bg-gray-500 text-gray-900 mb-4 p-3  px-12  font-medium cursor-pointer hover:bg-indigo-100 transition">
-              Buy Me A Coffee  |☕|
-            </p>
-          </div>
-        </div>
 
-        {/* Right column: Minimal line illustration (SVG) */}
-        <div className="flex justify-center md:justify-end">
-          <div className="w-full max-w-xs md:max-w-base bg-white p-3 rounded-2xl border border-gray-200 shadow">
+          {/* Buy Me a Coffee */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="
+              mt-5 inline-flex items-center gap-2 
+              px-12 py-2 rounded-xl cursor-pointer
+              bg-yellow-300 text-gray-900
+              font-medium shadow hover:bg-yellow-400
+              transition
+            "
+          >
+            ☕ Buy Me a Coffee
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT — PHOTO CARD */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex justify-center md:justify-end"
+        >
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            className="
+              bg-white/70 dark:bg-gray-800/40 
+              backdrop-blur-xl p-4 rounded-3xl 
+              border border-gray-200 dark:border-gray-700 
+              shadow-xl w-full max-w-xs
+            "
+          >
             <img
               src={MyPhoto}
               alt="Chamano Dev"
-              className="w-full h-72 rounded-xl object-cover object-top"
+              className="
+                w-full h-72 object-cover object-top 
+                rounded-2xl shadow-md
+              "
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -14,7 +14,6 @@ export default function LandingPage() {
       {/* Hero */}
       <LandingHero />
      
-
       {/* Services */}
       <Service />
 
