@@ -28,9 +28,10 @@ export default function Navbar() {
           href="/"
           whileHover={{ scale: 1.05 }}
           className="
-            text-xl font-extrabold tracking-wide 
+            text-[22px] font-extrabold tracking-wide 
            font-semibold text-gray-900
             bg-clip-text cursor-pointer
+            bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent
           "
         >
           ChamanoDevStudio

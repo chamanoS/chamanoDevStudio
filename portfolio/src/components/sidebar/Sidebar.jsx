@@ -21,7 +21,7 @@ export default function Sidebar() {
       >
         {/* Profile */}
         <div className="mt-10 md:mt-20">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-xl font-bold  bg-clip-text ">
             About Me
           </h1>
           <p className="text-sm text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">

@@ -33,7 +33,7 @@ export default function Projects() {
       tag: "Data Automation", // New Tag
       img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000",
       description:
-        "Built a full prediction engine using Python and deployed as a FastAPI backend. Reduced stock-outs by 37% and fully automated the daily reporting workflow.",
+        "Built a full prediction engine using Python and deployed as a FastAPI backend. Fully automated the daily reporting workflow.",
       tech: [TechIcons.Python, TechIcons.Node, TechIcons.Database, TechIcons.Automation],
     },
     {
@@ -220,191 +220,115 @@ export default function Projects() {
 
    <hr className="my-16" />
 
+{/* ================= SERVICES ================= */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          What I Can Build
+        </h2>
 
-        {/* SERVICES */}
-            <h2 className="text-3xl font-semibold mb-6">What I Can Build For You</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-20">
-              {/* Service 1 */}
-              <div className="p-6 border bg-white rounded-xl shadow-sm hover:shadow-lg transition">
-                <FaLaptopCode className="text-indigo-600 text-3xl mb-3" />
-                <h3 className="font-semibold text-lg">Web Development</h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  Beautiful, fast, and responsive websites that make your brand stand
-                  out.
-                </p>
-              </div>
-      
-              {/* Service 2 */}
-              <div className="p-6 border bg-white rounded-xl shadow-sm hover:shadow-lg transition">
-                <FaServer className="text-indigo-600 text-3xl mb-3" />
-                <h3 className="font-semibold text-lg">Backend & APIs</h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  Scalable APIs, automation tools, dashboards, and system
-                  integrations.
-                </p>
-              </div>
-      
-              {/* Service 3 */}
-              <div className="p-6 border bg-white rounded-xl shadow-sm hover:shadow-lg transition">
-                <FaChartBar className="text-indigo-600 text-3xl mb-3" />
-                <h3 className="font-semibold text-lg">Data & Analytics</h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  Power BI dashboards, SQL data models, and business intelligence
-                  systems.
-                </p>
-              </div>
-            </div>
-      
-            {/* WHY WORK WITH ME */}
-            <h2 className="text-3xl font-semibold mb-6">Why Clients Choose Me</h2>
-      
-            <div className="grid md:grid-cols-2 gap-10 mb-20">
-              <div className="space-y-4">
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaCheckCircle className="text-indigo-600" /> Clean, modern,
-                  well-engineered solutions
-                </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaCheckCircle className="text-indigo-600" /> Clear communication &
-                  reliability
-                </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaCheckCircle className="text-indigo-600" /> Fast delivery &
-                  attention to detail
-                </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                  <FaCheckCircle className="text-indigo-600" /> Business-focused
-                  mindset
-                </p>
-              </div>
-      
-              <div className="p-6 bg-indigo-50 border rounded-xl shadow-sm">
-                <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                  My Mission
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  To help entrepreneurs and businesses grow through technology,
-                  automation, and clean design. Every project is built with long-term
-                  value and scalability in mind.
-                </p>
-              </div>
-            </div>
-
-
-   {/* PROCESS TIMELINE - Styled with Vertical Line */}
-      <h2 className="text-3xl font-semibold mb-6">My Project Workflow</h2>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        <ProcessStep
-            number={1}
-            title="Discovery & Strategy"
-            description="Deep dive into goals, user needs, and required data sources."
-            isLast={false}
-        />
-        <ProcessStep
-            number={2}
-            title="Architecture & Design"
-            description="System blueprints, data models, and wireframes for the UX flow."
-            isLast={false}
-        />
-        <ProcessStep
-            number={3}
-            title="Development & Testing"
-            description="Agile development, clean coding, and rigorous QA testing."
-            isLast={false}
-        />
-        <ProcessStep
-            number={4}
-            title="Launch & Refinement"
-            description="Deployment, ongoing optimization, and support for your team."
-            isLast={false}
-        />
-      </div>
-      
-   <hr className="my-16" />
-   
-      {/* SKILLS BREAKDOWN - NEW FEATURE */}
-      <h2 className="text-3xl font-semibold mb-10 text-center">Core Technical Skills</h2>
-      <div className="grid md:grid-cols-2 gap-10 mb-20">
-        <div>
-            <h3 className="text-xl font-semibold mb-4">My Full-Stack Proficiency</h3>
-            <p className="text-gray-600 mb-6">I focus on building complete, end-to-end systems. My skills balance the speed of the UI with the reliability of the data pipeline.</p>
-            {skillData.map((skill, index) => (
-            <div key={index} className="mb-4">
-                <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-                <span className="text-sm font-medium text-gray-700">{skill.percent}%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div 
-                    className={`${skill.color} h-2.5 rounded-full`} 
-                    style={{ width: `${skill.percent}%` }}
-                ></div>
-                </div>
-            </div>
-            ))}
-        </div>
-        
-        {/* Why Choose Me - Refined */}
-        <div className="p-8 bg-indigo-50 border border-indigo-200 rounded-2xl shadow-inner">
-            <h3 className="font-bold text-2xl text-gray-900 mb-4">
-              The Data-Driven Difference
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-                Most developers build apps. I build solutions that speak the language of business. My unique blend of skills means every system is:
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-lg transition">
+            <FaLaptopCode className="text-3xl text-indigo-600 mb-3" />
+            <h4 className="font-semibold">Web Applications</h4>
+            <p className="text-sm text-gray-600 mt-2">
+              Modern, responsive web apps built with clean architecture and UX
+              best practices.
             </p>
-            <div className="space-y-4">
-                <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Clean & Maintainable Code: Built for the long term.
-                </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Data-Optimized Architecture: Databases and APIs designed for scale and performance.
-                </p>
-                <p className="flex items-center gap-3 text-gray-700">
-                    <FaCheckCircle className="text-indigo-600 flex-shrink-0" /> Quantitative Impact: Focused on measurable ROI (e.g., time saved, revenue increased).
-                </p>
-            </div>
+          </div>
+
+          <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-lg transition">
+            <FaServer className="text-3xl text-indigo-600 mb-3" />
+            <h4 className="font-semibold">APIs & Automation</h4>
+            <p className="text-sm text-gray-600 mt-2">
+              Scalable backend services, integrations, and automated workflows.
+            </p>
+          </div>
+
+          <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-lg transition">
+            <FaChartBar className="text-3xl text-indigo-600 mb-3" />
+            <h4 className="font-semibold">Data & Dashboards</h4>
+            <p className="text-sm text-gray-600 mt-2">
+              Power BI, analytics systems, and reporting that drive decisions.
+            </p>
+          </div>
         </div>
       </div>
-      
 
-      
-      <hr className="my-16" />
+      {/* ================= PROCESS ================= */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          How I Work
+        </h2>
 
-      {/* FINAL CALL TO ACTION & CONTACT FORM - New Section */}
-      <div className="text-center py-14 bg-gray-900 text-white rounded-3xl shadow-2xl" id="contact">
+        <div className="grid md:grid-cols-4 gap-8">
+          <ProcessStep
+            step={1}
+            title="Discovery"
+            desc="Understanding your goals, users, and constraints."
+          />
+          <ProcessStep
+            step={2}
+            title="Design & Architecture"
+            desc="Clear system design, data models, and UX flow."
+          />
+          <ProcessStep
+            step={3}
+            title="Build & Test"
+            desc="Clean code, iterative delivery, and quality checks."
+          />
+          <ProcessStep
+            step={4}
+            title="Launch & Improve"
+            desc="Deployment, optimization, and long-term support."
+          />
+        </div>
+      </div>
+
+      {/* ================= WHY ME ================= */}
+      <div className="grid md:grid-cols-2 gap-10 mb-24">
+        <div className="space-y-4">
+          {[
+            "Business-focused engineering mindset",
+            "Clean, maintainable, scalable code",
+            "Clear communication & reliability",
+            "Data-driven decision making",
+          ].map((item, i) => (
+            <p key={i} className="flex items-center gap-3">
+              <FaCheckCircle className="text-indigo-600" />
+              {item}
+            </p>
+          ))}
+        </div>
+
+        <div className="p-6 bg-indigo-50 rounded-xl border">
+          <h4 className="font-semibold text-lg mb-2">My Mission</h4>
+          <p className="text-gray-700 text-sm leading-relaxed">
+            I don’t just build software — I build systems that help teams work
+            smarter, scale faster, and make better decisions using technology
+            and data.
+          </p>
+        </div>
+      </div>
+
+      {/* ================= CTA ================= */}
+      <div
+        id="contact"
+        className="text-center py-14 bg-gray-900 text-white rounded-3xl shadow-2xl"
+      >
         <h2 className="text-4xl font-bold mb-4">
-          Ready to Automate & Grow?
+          Let’s Build Something Valuable
         </h2>
         <p className="text-gray-300 max-w-xl mx-auto mb-8">
-          Have a project in mind? Let's discuss your data challenges and how we can build a system that delivers predictable results.
+          Have an idea, challenge, or system you want to improve? Let’s talk.
         </p>
-        <div className="max-w-md mx-auto px-4">
-            <form className="flex flex-col gap-4">
-                <input 
-                    type="text" 
-                    placeholder="Your Name" 
-                    className="w-full px-5 py-3 rounded-lg border-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" 
-                />
-                <input 
-                    type="email" 
-                    placeholder="Your Email Address" 
-                    className="w-full px-5 py-3 rounded-lg border-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900" 
-                />
-                <textarea 
-                    placeholder="Tell me about your project (data, goals, timeline)" 
-                    rows="4"
-                    className="w-full px-5 py-3 rounded-lg border-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900"
-                ></textarea>
-                <button
-                    type="submit"
-                    className="w-full px-8 py-4 bg-indigo-600 rounded-lg font-bold text-white shadow-lg hover:bg-indigo-700 transition"
-                >
-                    Send Project Inquiry
-                </button>
-            </form>
-        </div>
+        <a
+          href="mailto:youremail@example.com"
+          className="inline-block px-8 py-4 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-700 transition"
+        >
+          Contact Me
+        </a>
       </div>
     </section>
+
   );
 }
