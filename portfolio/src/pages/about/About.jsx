@@ -27,68 +27,60 @@ export default function About() {
   return (
     <div className="px-6 md:px-10 py-[80px] max-w-6xl mx-auto text-gray-800">
       {/* 🟦 HERO SECTION */}
-      <section className="mb-16 text-center">
+       {/* ================= HERO ================= */}
+      <section className="mb-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Hi, I’m <span className="text-indigo-600">Chamano</span>
         </h1>
-        <h2 className="text-xl md:text-2xl mb-4">
-          <span className="text-indigo-400">
-            <Typewriter
-              words={[
-                "Fullstack Developer",
-                "Problem Solver",
-                "Data Enthusiast",
-              ]}
-              loop={true}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1500}
-            />
-          </span>
+
+        <h2 className="text-xl md:text-2xl mb-6 text-indigo-500">
+          <Typewriter
+            words={[
+              "Full-Stack Developer",
+              "BI & Data Analyst",
+              "Problem Solver",
+            ]}
+            loop
+            cursor
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
         </h2>
-        <p className="text-gray-700 text-left max-w-3xl mx-auto leading-relaxed mb-6">
-          I love creating web applications, dashboards, and interactive
-          experiences that make life a little easier and more fun. Ever since I
-          was young, I’ve been curious about how technology can solve real-world
-          problems, and that curiosity naturally led me into coding, data, and
-          building things that actually work. <br />
-          <br />
-          Over the years, I’ve dived deep into React, Node.js, and modern
-          frontend and backend tools, while exploring cloud services,
-          automation, and data visualization. I enjoy taking complex challenges
-          and turning them into simple, elegant solutions that people can
-          actually use and enjoy. <br />
-          <br />
-          What really drives me is learning new technologies, collaborating with
-          creative minds, and constantly improving. I bring curiosity,
-          persistence, and a positive, team-oriented attitude to every project.
-          If you’re looking for someone who’s not just technically skilled, but
-          also passionate about building things that matter and loves working
-          with people who are driven and innovative, that’s me.
+
+        <p className="max-w-3xl mx-auto text-left leading-relaxed text-gray-700">
+          I’m a developer who enjoys building clean, scalable web applications
+          and turning raw data into meaningful insights. My work spans full-stack
+          development, business intelligence, and automation — always focused
+          on solving real problems.
+          <br /><br />
+          I enjoy working across the stack, collaborating with teams, and
+          continuously learning new technologies. I value clarity, reliability,
+          and building solutions people actually enjoy using.
         </p>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 mt-8">
           <a
             href="#projects"
-            className="bg-indigo-600 text-white px-5 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
+            className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition"
           >
             View Projects
           </a>
+
           <a
             href="/cv.pdf"
             download
-            className="flex items-center gap-2 bg-gray-800 text-white px-5 py-2 rounded-lg shadow hover:bg-gray-900 transition"
+            className="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg shadow hover:bg-black transition"
           >
             <FaFileDownload /> Download CV
           </a>
         </div>
-        <div className="flex justify-center gap-6 mt-6 text-gray-600 text-2xl">
-          <a href="https://github.com/" target="_blank">
-            <FaGithub className="hover:text-gray-900 transition" />
+
+        <div className="flex justify-center gap-6 mt-6 text-2xl text-gray-600">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <FaGithub className="hover:text-black transition" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
             <FaLinkedin className="hover:text-blue-600 transition" />
           </a>
         </div>
@@ -206,90 +198,47 @@ export default function About() {
       </section>
 
       {/* 🟧 EXPERIENCE TIMELINE */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6">Experience</h2>
+       <section className="mb-20">
+        <h2 className="text-3xl font-semibold mb-8">Experience</h2>
+
         <div className="space-y-8">
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                Junior Developer — Freelance
-              </h3>
-              <p className="text-sm text-gray-600">2019 - Present</p>
-              <p className="mt-2 text-gray-700">
-                Built web applications, dashboards, and responsive sites for
-                small businesses and personal projects. Focus on React,
-                Tailwind, Power BI, and modern UI design.
-              </p>
+          {[
+            {
+              role: "BI Analyst — FNB",
+              time: "2024 – 2025",
+              desc: "Designed Power BI dashboards, improved reporting workflows, and supported data-driven decision-making.",
+            },
+            {
+              role: "Software Developer — Geeks4Learning",
+              time: "2023 – 2024",
+              desc: "Built web applications and dashboards using React, Tailwind, and Power BI.",
+            },
+            {
+              role: "IT Support — Centenary Networks & Azania Data",
+              time: "2023 – 2024",
+              desc: "Provided technical support, system maintenance, and troubleshooting.",
+            },
+            {
+              role: "Application Developer — M & T Development",
+              time: "2022 – 2023",
+              desc: "Developed full-stack solutions for internal tools and client projects.",
+            },
+            {
+              role: "Junior developer — The Digital Academy",
+              time: "2019 – 2020",
+              desc: "Assisted in building web applications and learning best practices in software development.",
+            }
+            
+          ].map((job, i) => (
+            <div key={i} className="flex gap-4">
+              <FaBriefcase className="text-2xl text-indigo-600 mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">{job.role}</h3>
+                <p className="text-sm text-gray-500">{job.time}</p>
+                <p className="mt-2 text-gray-700">{job.desc}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                Software developer Intern — The Digital Academy
-              </h3>
-              <p className="text-sm text-gray-600">2019 - 2020 </p>
-              <p className="mt-2 text-gray-700">
-                Built web applications, dashboards, and responsive sites for
-                small businesses and personal projects. Focus on React,
-                Tailwind, Power BI, and modern UI design.
-              </p>
-            </div>
-          </div>{" "}
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                Application Developer — M & T Development
-              </h3>
-              <p className="text-sm text-gray-600">2022 - 2023</p>
-              <p className="mt-2 text-gray-700">
-                Built web applications, dashboards, and responsive sites for
-                small businesses and personal projects. Focus on React,
-                Tailwind, Power BI, and modern UI design.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                IT Support — Centenary Networks and Azania Data
-              </h3>
-              <p className="text-sm text-gray-600">2023 - 2024</p>
-              <p className="mt-2 text-gray-700">
-                Assisted clients with technical issues, managed computer
-                systems, and supported networking and software troubleshooting.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                Software Developer — Geeks4learning
-              </h3>
-              <p className="text-sm text-gray-600">2023 - 2024</p>
-              <p className="mt-2 text-gray-700">
-                Built web applications, dashboards, and responsive sites for
-                small businesses and personal projects. Focus on React,
-                Tailwind, Power BI, and modern UI design.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 items-start">
-            <FaBriefcase className="text-3xl text-indigo-600 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">BI Analyst — FNB</h3>
-              <p className="text-sm text-gray-600">2024 - 2025</p>
-              <p className="mt-2 text-gray-700">
-                Built web applications, dashboards, and responsive sites for
-                small businesses and personal projects. Focus on React,
-                Tailwind, Power BI, and modern UI design.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -353,35 +302,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* 🟪 TESTIMONIALS */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6">Testimonials</h2>
-        <div className="space-y-6">
-          {[
-            {
-              quote:
-                "Siba is a highly skilled developer who delivers quality projects on time.",
-              name: "Jane Doe, Project Manager",
-            },
-            {
-              quote: "Excellent problem solver and team player, very reliable.",
-              name: "John Smith, Freelancer",
-            },
-          ].map((t, i) => (
-            <motion.div
-              key={i}
-              className="p-5 bg-indigo-50 rounded-xl shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
-              <p className="text-gray-700 italic">"{t.quote}"</p>
-              <p className="mt-2 font-semibold text-indigo-600">— {t.name}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
       {/* 🟪 FUN FACTS / COUNTERS */}
       <section className="mb-20">
