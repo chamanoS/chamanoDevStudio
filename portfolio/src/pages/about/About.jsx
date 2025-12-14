@@ -18,17 +18,14 @@ import {
   FaPython,
   FaJava,
   FaBullseye,
-  FaPaintBrush,
-  FaPenNib,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
 
 export default function About() {
   return (
     <div className="px-6 md:px-10 py-[80px] max-w-6xl mx-auto text-gray-800">
-      {/* 🟦 HERO SECTION */}
-       {/* ================= HERO ================= */}
-      <section className="mb-20 text-center">
+
+      {/* ================= HERO ================= */}
+     <section className="mb-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Hi, I’m <span className="text-indigo-600">Chamano</span>
         </h1>
@@ -51,7 +48,7 @@ export default function About() {
         <p className="max-w-3xl mx-auto text-left leading-relaxed text-gray-700">
           I’m a developer who enjoys building clean, scalable web applications
           and turning raw data into meaningful insights. My work spans full-stack
-          development, business intelligence, and automation — always focused
+          development, business intelligence, and automation; always focused
           on solving real problems.
           <br /><br />
           I enjoy working across the stack, collaborating with teams, and
@@ -86,193 +83,86 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mb-20">
-  <h2 className="text-3xl font-semibold mb-6">Skills</h2>
-
-  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-    {/* JavaScript */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaJs className="text-3xl text-yellow-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">JavaScript</h3>
-        <p className="text-sm text-gray-600">
-          Frontend logic & interactions
+      {/* ================= SKILLS ================= */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-2">Skills</h2>
+        <p className="text-gray-600 mb-8">
+          Tools and technologies I use to build reliable products and
+          data‑driven solutions
         </p>
-      </div>
-    </div>
 
-    {/* React */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaReact className="text-3xl text-blue-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">React JS</h3>
-        <p className="text-sm text-gray-600">
-          Component architecture & UI development
-        </p>
-      </div>
-    </div>
-
-    {/* Node */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaNodeJs className="text-3xl text-green-600 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">Node.js</h3>
-        <p className="text-sm text-gray-600">
-          APIs & backend fundamentals
-        </p>
-      </div>
-    </div>
-
-    {/* Python */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaPython className="text-3xl text-blue-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">Python</h3>
-        <p className="text-sm text-gray-600">
-          Scripting & automation
-        </p>
-      </div>
-    </div>
-
-    {/* Java */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaJava className="text-3xl text-red-600 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">Java / Spring Boot</h3>
-        <p className="text-sm text-gray-600">
-          OOP & backend development
-        </p>
-      </div>
-    </div>
-
-    {/* HTML */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaHtml5 className="text-3xl text-orange-600 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">HTML5</h3>
-        <p className="text-sm text-gray-600">
-          Semantic structure & layout
-        </p>
-      </div>
-    </div>
-
-    {/* Tailwind */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaCss3Alt className="text-3xl text-teal-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">CSS / Tailwind</h3>
-        <p className="text-sm text-gray-600">
-          Responsive utility-first styling
-        </p>
-      </div>
-    </div>
-
-    {/* Git */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaGithub className="text-3xl text-gray-900 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">Git & GitHub</h3>
-        <p className="text-sm text-gray-600">
-          Version control & collaborate
-        </p>
-      </div>
-    </div>
-
-    {/* AWS */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaCloud className="text-3xl text-orange-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">AWS Fundamentals</h3>
-        <p className="text-sm text-gray-600">
-          Cloud basics & deployment
-        </p>
-      </div>
-    </div>
-
-    {/* Databases */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaDatabase className="text-3xl text-purple-600 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">SQL / Databases</h3>
-        <p className="text-sm text-gray-600">
-          Data modelling & queries
-        </p>
-      </div>
-    </div>
-
-    {/* Power BI */}
-    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-      <FaChartBar className="text-3xl text-yellow-500 mt-1 shrink-0" />
-      <div>
-        <h3 className="font-semibold">Power BI</h3>
-        <p className="text-sm text-gray-600">
-          Dashboards & analytics
-        </p>
-      </div>
-    </div>
-
-    {/* ETL Tools */}
-<div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
-  <FaBullseye className="text-3xl text-indigo-600 mt-1 shrink-0" />
-  <div>
-    <h3 className="font-semibold">ETL Tools</h3>
-    <p className="text-sm text-gray-600">
-      SSAS, SSIS & SSRS — data integration & reporting
-    </p>
-  </div>
-</div>
-
-  </div>
-</section>
-
-
-      {/* 🟧 EXPERIENCE TIMELINE */}
-       <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-8">Experience</h2>
-
-        <div className="space-y-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
-            {
-              role: "BI Analyst — FNB",
-              time: "2024 – 2025",
-              desc: "Designed Power BI dashboards, improved reporting workflows, and supported data-driven decision-making.",
-            },
-            {
-              role: "Software Developer — Geeks4Learning",
-              time: "2023 – 2024",
-              desc: "Built web applications and dashboards using React, Tailwind, and Power BI.",
-            },
-            {
-              role: "IT Support — Centenary Networks & Azania Data",
-              time: "2023 – 2024",
-              desc: "Provided technical support, system maintenance, and troubleshooting.",
-            },
-            {
-              role: "Application Developer — M & T Development",
-              time: "2022 – 2023",
-              desc: "Developed full-stack solutions for internal tools and client projects.",
-            },
-            {
-              role: "Junior developer — The Digital Academy",
-              time: "2019 – 2020",
-              desc: "Assisted in building web applications and learning best practices in software development.",
-            }
-            
-          ].map((job, i) => (
-            <div key={i} className="flex gap-4">
-              <FaBriefcase className="text-2xl text-indigo-600 mt-1" />
-              <div>
-                <h3 className="font-semibold text-lg">{job.role}</h3>
-                <p className="text-sm text-gray-500">{job.time}</p>
-                <p className="mt-2 text-gray-700">{job.desc}</p>
+            { icon: <FaJs />, title: "JavaScript", desc: "Frontend logic & interactions", color: "text-yellow-500" },
+            { icon: <FaReact />, title: "React JS", desc: "Component architecture & UI development", color: "text-blue-500" },
+            { icon: <FaNodeJs />, title: "Node.js", desc: "APIs & backend fundamentals", color: "text-green-600" },
+            { icon: <FaPython />, title: "Python", desc: "Scripting & automation", color: "text-blue-500" },
+            { icon: <FaJava />, title: "Java / Spring Boot", desc: "OOP & backend development", color: "text-red-600" },
+            { icon: <FaHtml5 />, title: "HTML5", desc: "Semantic structure & layout", color: "text-orange-600" },
+            { icon: <FaCss3Alt />, title: "CSS / Tailwind", desc: "Responsive utility‑first styling", color: "text-teal-500" },
+            { icon: <FaGithub />, title: "Git & GitHub", desc: "Version control & collaborate", color: "text-gray-900" },
+            { icon: <FaCloud />, title: "AWS Fundamentals", desc: "Cloud basics & deployment", color: "text-orange-500" },
+            { icon: <FaDatabase />, title: "SQL / Databases", desc: "Data modelling & queries", color: "text-purple-600" },
+            { icon: <FaChartBar />, title: "Power BI", desc: "Dashboards & analytics", color: "text-yellow-500" },
+            { icon: <FaBullseye />, title: "ETL Tools", desc: "SSAS, SSIS & SSRS", color: "text-indigo-600" },
+          ].map((skill, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              whileHover={{ y: -4 }}
+              className="p-5 bg-white shadow-md rounded-xl flex items-start gap-4 border hover:shadow-xl transition"
+            >
+              <div className={`text-3xl mt-1 shrink-0 ${skill.color}`}>
+                {skill.icon}
               </div>
-            </div>
+              <div>
+                <h3 className="font-semibold">{skill.title}</h3>
+                <p className="text-sm text-gray-600">{skill.desc}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 🟪 CERTIFICATIONS */}
+      {/* ================= EXPERIENCE ================= */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-10">Experience</h2>
+
+        <div className="space-y-10">
+          {[
+            { role: "BI Analyst — FNB", time: "2024 – 2025", desc: "Designed Power BI dashboards and improved reporting workflows." },
+            { role: "Software Developer — Geeks4Learning", time: "2023 – 2024", desc: "Built web applications using React, Tailwind, and Power BI." },
+            { role: "IT Support — Centenary Networks", time: "2023 – 2024", desc: "Provided system support, troubleshooting, and maintenance." },
+            { role: "Application Developer — M & T Development", time: "2022 – 2023", desc: "Developed full‑stack solutions for internal tools and clients." },
+            {
+              role: "Junior developer — The Digital Academy",
+              time: "2019 – 2020",
+              desc: "Assisted in building web applications and learning best practices in software development.",
+            },
+          ].map((job, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative pl-8"
+            >
+              <span className="absolute left-0 top-1 w-3 h-3 bg-indigo-600 rounded-full" />
+              <div className="border-l-2 border-indigo-200 pl-6">
+                <h3 className="font-semibold text-lg">{job.role}</h3>
+                <p className="text-sm text-gray-500">{job.time}</p>
+                <p className="mt-2 text-gray-700">{job.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+       {/* 🟪 CERTIFICATIONS */}
       <section className="mb-20">
         <h2 className="text-3xl font-semibold mb-8">Certifications</h2>
         <div className="grid sm:grid-cols-2 gap-6">
@@ -332,10 +222,10 @@ export default function About() {
         </div>
       </section>
 
+      {/* ================= FUN FACTS ================= */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-8">Fun Facts</h2>
 
-      {/* 🟪 FUN FACTS / COUNTERS */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6">Fun Facts</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { value: 50, label: "Projects Completed" },
@@ -345,11 +235,12 @@ export default function About() {
           ].map((fact, i) => (
             <motion.div
               key={i}
-              className="p-5 bg-indigo-50 rounded-xl text-center"
+              whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="p-6 bg-gradient-to-br from-indigo-50 to-white rounded-xl text-center shadow"
             >
               <h3 className="text-2xl font-bold text-indigo-600">
                 <CountUp end={fact.value} duration={2} separator="," />
@@ -360,11 +251,18 @@ export default function About() {
         </div>
       </section>
 
-      {/* 🟪 CONTACT CTA */}
-      <section className="text-center py-12 bg-indigo-50 rounded-xl shadow mt-12">
-        <h2 className="text-3xl font-semibold mb-4">Let's Work Together</h2>
+      {/* ================= CTA ================= */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center py-14 bg-indigo-50 rounded-xl shadow"
+      >
+        <h2 className="text-3xl font-semibold mb-4">
+          Ready to Build Something Meaningful?
+        </h2>
         <p className="text-gray-700 mb-6">
-          I’m open to freelance, full-time, or collaboration opportunities.
+          I’m open to full‑time roles, freelance work, and collaborations.
         </p>
         <a
           href="mailto:youremail@example.com"
@@ -372,7 +270,7 @@ export default function About() {
         >
           Contact Me
         </a>
-      </section>
+      </motion.section>
     </div>
   );
 }
