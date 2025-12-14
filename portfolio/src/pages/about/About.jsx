@@ -87,115 +87,145 @@ export default function About() {
       </section>
 
       <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6">Skills</h2>
+  <h2 className="text-3xl font-semibold mb-6">Skills</h2>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {/* JavaScript */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaJs className="text-4xl text-yellow-500 mb-3" />
-            <h3 className="font-semibold">JavaScript</h3>
-            <p className="text-sm">Frontend logic & interactions</p>
-          </div>
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-          {/* React JS */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaReact className="text-4xl text-blue-500 mb-3" />
-            <h3 className="font-semibold">React JS</h3>
-            <p className="text-sm">Component architecture & UI development</p>
-          </div>
+    {/* JavaScript */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaJs className="text-3xl text-yellow-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">JavaScript</h3>
+        <p className="text-sm text-gray-600">
+          Frontend logic & interactions
+        </p>
+      </div>
+    </div>
 
-          {/* Node.js */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaNodeJs className="text-4xl text-green-600 mb-3" />
-            <h3 className="font-semibold">Node.js</h3>
-            <p className="text-sm">APIs & backend fundamentals</p>
-          </div>
-          {/* Python */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaPython className="text-4xl text-blue-500 mb-3" />
-            <h3 className="font-semibold">Python</h3>
-            <p className="text-sm">Scripting, data analysis & automation</p>
-          </div>
+    {/* React */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaReact className="text-3xl text-blue-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">React JS</h3>
+        <p className="text-sm text-gray-600">
+          Component architecture & UI development
+        </p>
+      </div>
+    </div>
 
-          {/* Java */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaJava className="text-4xl text-red-600 mb-3" />
-            <h3 className="font-semibold">Java - SpringBoot</h3>
-            <p className="text-sm">OOP & backend development</p>
-          </div>
+    {/* Node */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaNodeJs className="text-3xl text-green-600 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">Node.js</h3>
+        <p className="text-sm text-gray-600">
+          APIs & backend fundamentals
+        </p>
+      </div>
+    </div>
 
-          {/* HTML5 */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaHtml5 className="text-4xl text-orange-600 mb-3" />
-            <h3 className="font-semibold">HTML5</h3>
-            <p className="text-sm">Semantic structure & layout</p>
-          </div>
+    {/* Python */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaPython className="text-3xl text-blue-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">Python</h3>
+        <p className="text-sm text-gray-600">
+          Scripting & automation
+        </p>
+      </div>
+    </div>
 
-          {/* CSS3 / Tailwind */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaCss3Alt className="text-4xl text-teal-500 mb-3" />
-            <h3 className="font-semibold">CSS3 / Tailwind</h3>
-            <p className="text-sm">Responsive & modern utility-first styling</p>
-          </div>
+    {/* Java */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaJava className="text-3xl text-red-600 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">Java / Spring Boot</h3>
+        <p className="text-sm text-gray-600">
+          OOP & backend development
+        </p>
+      </div>
+    </div>
 
-          {/* Git & GitHub */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaGithub className="text-4xl text-gray-900 mb-3" />
-            <h3 className="font-semibold">Git & GitHub</h3>
-            <p className="text-sm">Version control & collaboration</p>
-          </div>
+    {/* HTML */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaHtml5 className="text-3xl text-orange-600 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">HTML5</h3>
+        <p className="text-sm text-gray-600">
+          Semantic structure & layout
+        </p>
+      </div>
+    </div>
 
-          {/* AWS */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaCloud className="text-4xl text-orange-500 mb-3" />
-            <h3 className="font-semibold">AWS Fundamentals</h3>
-            <p className="text-sm">Cloud services basics & deployment</p>
-          </div>
-          {/* SQL / Databases */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaDatabase className="text-4xl text-purple-600 mb-3" />
-            <h3 className="font-semibold">SQL / Databases</h3>
-            <p className="text-sm">Data modelling & queries</p>
-          </div>
+    {/* Tailwind */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaCss3Alt className="text-3xl text-teal-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">CSS / Tailwind</h3>
+        <p className="text-sm text-gray-600">
+          Responsive utility-first styling
+        </p>
+      </div>
+    </div>
 
-          {/* Power BI */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaChartBar className="text-4xl text-yellow-500 mb-3" />
-            <h3 className="font-semibold">Power BI</h3>
-            <p className="text-sm">Dashboards & data analytics</p>
-          </div>
+    {/* Git */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaGithub className="text-3xl text-gray-900 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">Git & GitHub</h3>
+        <p className="text-sm text-gray-600">
+          Version control & collaborate
+        </p>
+      </div>
+    </div>
 
-          {/* ETL / Data Tools */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaBullseye className="text-4xl text-green-700 mb-3" />
-            <h3 className="font-semibold">ETL Tools</h3>
-            <p className="text-sm">
-              SSIS, SSRS, SSAS — Data integration & reporting
-            </p>
-          </div>
+    {/* AWS */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaCloud className="text-3xl text-orange-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">AWS Fundamentals</h3>
+        <p className="text-sm text-gray-600">
+          Cloud basics & deployment
+        </p>
+      </div>
+    </div>
 
-          {/* Digital Marketing */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaBullseye className="text-4xl text-indigo-600 mb-3" />
-            <h3 className="font-semibold">Digital Marketing</h3>
-            <p className="text-sm">SEO, social media & analytics basics</p>
-          </div>
+    {/* Databases */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaDatabase className="text-3xl text-purple-600 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">SQL / Databases</h3>
+        <p className="text-sm text-gray-600">
+          Data modelling & queries
+        </p>
+      </div>
+    </div>
 
-          {/* Figma / Design */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaPaintBrush className="text-4xl text-pink-500 mb-3" />
-            <h3 className="font-semibold">Figma</h3>
-            <p className="text-sm">UI/UX design & prototyping</p>
-          </div>
+    {/* Power BI */}
+    <div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+      <FaChartBar className="text-3xl text-yellow-500 mt-1 shrink-0" />
+      <div>
+        <h3 className="font-semibold">Power BI</h3>
+        <p className="text-sm text-gray-600">
+          Dashboards & analytics
+        </p>
+      </div>
+    </div>
 
-          {/* Technical Writing */}
-          <div className="p-5 bg-white shadow rounded-xl flex flex-col items-center text-center">
-            <FaPenNib className="text-4xl text-gray-800 mb-3" />
-            <h3 className="font-semibold">Technical Writing</h3>
-            <p className="text-sm">Documentation & clear communication</p>
-          </div>
-        </div>
-      </section>
+    {/* ETL Tools */}
+<div className="p-5 bg-white shadow rounded-xl flex items-start gap-4">
+  <FaBullseye className="text-3xl text-indigo-600 mt-1 shrink-0" />
+  <div>
+    <h3 className="font-semibold">ETL Tools</h3>
+    <p className="text-sm text-gray-600">
+      SSAS, SSIS & SSRS — data integration & reporting
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
       {/* 🟧 EXPERIENCE TIMELINE */}
        <section className="mb-20">
